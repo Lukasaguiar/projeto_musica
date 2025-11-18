@@ -56,7 +56,7 @@ echo <<< Bloco
         color: black;
         height: 1.8rem;
         border-radius: 5px;
-        width: 9rem;
+
 
     }
 

@@ -25,6 +25,13 @@ return $conn;
 
 }
 
+function ExecutaQuery($dbh,$query){
 
+$resultadoQuery=$dbh->query("$query");
+
+return $resultadoQuery;
+
+
+}
 
 ?>
