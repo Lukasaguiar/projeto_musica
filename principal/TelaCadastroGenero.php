@@ -111,6 +111,10 @@ Bloco;
 
 
  function GravarDados(){
+ //preciso abrir um novo banco de dados a cada funcao. se nao nao funciona
+ // ou quando for uma variavel global, indicar no codigo que a tal variavel eh global
+    global $dbh;
+    global $query;
 
  $nomeGeneroAtual= $_POST['nome'];
  echo "gravar dados:$nomeGeneroAtual ";
@@ -154,6 +158,22 @@ echo <<< Bloco
     </head>
     <body>
     <center>
+
+
+
+Bloco;
+
+ #vamos começar a gravacao dos generos
+
+ $query="INSERT INTO genero(nome) VALUES('$nomeGeneroAtual')";
+
+ $respostaAtual=ExecutaQuery($dbh,$query);
+
+
+
+
+
+echo <<< Bloco
 
 
    <div >
