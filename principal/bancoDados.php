@@ -29,6 +29,8 @@ function ExecutaQuery($dbh,$query){
 
 $resultadoQuery=$dbh->query("$query");
 
+#caso erro. precisamos adicionaro rollback aqui
+
 return $resultadoQuery;
 
 
