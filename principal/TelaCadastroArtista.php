@@ -61,7 +61,7 @@ echo <<< Bloco
        </style>
        <script>
          function GravarDados(){
-         alert('aaaa');
+
            var formulario=document.forms[0];
            formulario.operacao.value='GravarDados';
            formulario.submit();

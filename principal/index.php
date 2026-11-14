@@ -39,8 +39,7 @@ $query="SELECT * FROM genero";
 
 $respostaAtual=ExecutaQuery($dbh,$query);
 
-$teste=$respostaAtual->fetch_object();
-print"teste:$teste->nome";
+
 
 echo<<< Bloco
  <html>
@@ -56,10 +55,31 @@ echo<<< Bloco
 
        }
      </script>
+ <style>
+         .cabecaTabela {
+        color: Blue;
+        background-color: #47d1b6;
+        text-align: center;
+        color: #17412eed;
+    }
+           .menuTabela{
+          background-color: #c59e7038;
+          }
 
+          .BotaoDesign {
+        background-color: #2ca9ad96;
+        font-weight: bold;
+        color: black;
+        height: 1.8rem;
+        border-radius: 5px;
+        width: 13.2rem;
+
+    }
+
+       </style>
   </head>
   <body>
-     <main>
+     <main class='menuTabela'>
       <center>
         <div class=\"TituloPrincipal\">Tela de Navegação </div>
 
@@ -72,23 +92,21 @@ echo<<< Bloco
 
        <form name='formulario'>
        <div class='Conteiner_Navegacao_Botoes'>
-          <input type='button' name='TelaConsulta' value='Consultar Gravações' class='BotaoNavegacao' onclick="irParaOutrosScripts('consultarGravacoes.php')">
+          <input type='button'  class='BotaoDesign' name='TelaConsulta' value='Consultar Gravações' class='BotaoNavegacao' onclick="irParaOutrosScripts('consultarGravacoes.php')">
           <br>
           <br>
-          <input type='button' name='TelaCadastro' value="Cadastrar nova Gravação" onclick="irParaOutrosScripts('novaGravacao.php')" class='BotaoNavegacao'>
+          <input type='button' class='BotaoDesign' name='TelaCadastro' value="Cadastrar nova Gravação" onclick="irParaOutrosScripts('novaGravacao.php')" class='BotaoNavegacao'>
            <br>
            <br>
-          <input type='button' name='TelaCadastrarMusica' value="Tela de Cadastro Musica" onclick="irParaOutrosScripts('TelaCadastroMusica.php')" class='BotaoNavegacao'>
+          <input type='button' class='BotaoDesign' name='TelaCadastrarMusica' value="Tela de Cadastro Musica" onclick="irParaOutrosScripts('TelaCadastroMusica.php')" class='BotaoNavegacao'>
            <br>
            <br>
-          <input type='button' name='TelaCadastrarArtista' value="Tela de Cadastro Artista/Banda" onclick="irParaOutrosScripts('TelaCadastroArtista.php')" class='BotaoNavegacao'>
+          <input type='button' class='BotaoDesign' name='TelaCadastrarArtista' value="Tela de Cadastro Artista/Banda" onclick="irParaOutrosScripts('TelaCadastroArtista.php')" class='BotaoNavegacao'>
            <br>
            <br>
-          <input type='button' name='TelaCadastrarArtista' value="Tela de Cadastro Genero" onclick="irParaOutrosScripts('TelaCadastroGenero.php')" class='BotaoNavegacao'>
+          <input type='button' class='BotaoDesign' name='TelaCadastrarArtista' value="Tela de Cadastro Genero" onclick="irParaOutrosScripts('TelaCadastroGenero.php')" class='BotaoNavegacao'>
            <br>
-           <br>
-          <input type='button' name='TelaCarga' value="Tela de Carga de Gravações" onclick="irParaOutrosScripts('cargaGravacao.php')" class='BotaoNavegacao'>
-           <br>
+
            <br>
         </div>
         </form>
