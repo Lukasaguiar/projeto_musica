@@ -43,10 +43,50 @@ echo <<< Bloco
            }
          </script>
 
+<head>
+       <style>
+         .cabecaTabela {
+        color: Blue;
+        background-color: #47d1b6;
+        text-align: center;
+        color: #17412eed;
+    }
+           .menuTabela{
+          background-color: #c59e7038;
+          }
 
+          .BotaoDesign {
+        background-color: #2ca9ad96;
+        font-weight: bold;
+        color: black;
+        height: 1.8rem;
+        border-radius: 5px;
+        width: 12rem;
+
+    }
+
+       </style>
+       <script>
+         function GravarDados(){
+         alert('aaaa');
+           var formulario=document.forms[0];
+           formulario.operacao.value='GravarDados';
+           formulario.submit();
+         }
+       </script>
+
+       <script>
+           function irParaOutrosScripts(script){
+               document.location="./"+script;
+
+           }
+         </script>
+
+
+    </head>
   </head>
   <body>
-     <main>
+     <main class='menuTabela'>
       <center>
         <div class="TituloPrincipal">Tela de Consulta de gravações </div>
 
@@ -74,15 +114,43 @@ Bloco;
             $isYoutube=$row['is_youtube'];
             $nomeGravacao=$row['nome'];
 
-// para mostrar os videos do youtube no nosso site aqui precisamos mostrar a url
-//    src="https://www.youtube.com/embed/oEy9sf9COes" usamos esse /embed/
-// caso querermos abrir so o video no youtube podemos com esse embed ou  watch
 
+$urlMiniPlayer="$urlAtual";
+
+#i ignora faz n ser case sensitive
+$urlMiniPlayer = preg_replace('/watch\?v\=/i', 'embed/', $urlMiniPlayer);
+$urlMiniPlayer = preg_replace('/youtu.be/', 'www.youtube.com', $urlMiniPlayer);
+
+
+#vamos checar se existe o campo embed. senao. botamos
+
+if(!(preg_match('/embed/', $urlMiniPlayer))){
+
+$urlMiniPlayer = preg_replace('/www.youtube.com\//', 'www.youtube.com/embed/', $urlMiniPlayer);
+
+}
+
+#se for um short. o tratament o é diferente
+
+if((preg_match('/shorts/', $urlMiniPlayer))){
+
+$urlMiniPlayer = preg_replace('/youtube.com\/shorts/', 'www.youtube.com/embed/', $urlMiniPlayer);
+
+}
+
+#//$urlMiniPlayer="https://www.youtube.com/embed/LLMI2wykMzU";
+
+
+  $urlAtual="https://www.youtube.com/embed/zWboOvA1onI";
+#// para mostrar os videos do youtube no nosso site aqui precisamos mostrar a url
+#//    src="https://www.youtube.com/embed/oEy9sf9COes" usamos esse /embed/
+#// caso querermos abrir so o video no youtube podemos com esse embed ou  watch
+#//
   echo <<< Bloco
 
    <tr>
      <td>
-       <iframe class="ajuda-play"  src="$urlAtual" frameborder="0"
+       <iframe class="ajuda-play"  src="$urlMiniPlayer" frameborder="0"
            width="400px" height="200px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
            allowfullscreen>
        </iframe>
@@ -101,6 +169,26 @@ Bloco;
 
 echo <<< Bloco
 
+   <tr>
+     <td>
+       <iframe class="ajuda-play"  src="$urlAtual" frameborder="0"
+           width="400px" height="200px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen>
+       </iframe>
+     </td>
+       </tr>
+    </tr>
+       <td align='middle'> <a href="$urlAtual" target="_blank"> $nomeGravacao </a> </td>
+    <tr>
+
+
+
+Bloco;
+
+
+
+
+echo <<< Bloco
 
 
 
@@ -110,7 +198,7 @@ echo <<< Bloco
 
        <br>
        <div class='Conteiner_Navegacao_Botoes'>
-           <input type='button' name='RetornarMenu' value="Retornar Menu Principal" onClick="irParaOutrosScripts('index.php')" class='BotaoNavegacao'>
+           <input type='button' class='BotaoDesign' name='RetornarMenu' value="Retornar" onClick="irParaOutrosScripts('index.php')" class='BotaoNavegacao'>
         </div>
 
 
