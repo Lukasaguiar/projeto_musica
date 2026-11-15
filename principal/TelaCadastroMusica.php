@@ -107,11 +107,11 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
-    <div class='menuTabela'>
+    <div>
     <form name='formulario' action='./TelaCadastroMusica.php' method='post'>
     <table>
      <tr>
@@ -193,7 +193,7 @@ echo <<< Bloco
     }
 
        </style>
-     ]
+
        <script>
            function irParaOutrosScripts(script){
                document.location="./"+script;
@@ -203,7 +203,7 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 

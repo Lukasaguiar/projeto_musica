@@ -78,8 +78,8 @@ echo<<< Bloco
 
        </style>
   </head>
-  <body>
-     <main class='menuTabela'>
+  <body class='menuTabela'>
+     <main >
       <center>
         <div class=\"TituloPrincipal\">Tela de Navegação </div>
 

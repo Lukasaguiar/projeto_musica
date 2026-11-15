@@ -61,7 +61,6 @@ echo <<< Bloco
        </style>
        <script>
          function GravarDados(){
-         alert('aaaa');
            var formulario=document.forms[0];
            formulario.operacao.value='GravarDados';
            formulario.submit();
@@ -77,11 +76,11 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
-    <div class='menuTabela'>
+    <div>
     <form name='formulario' action='./TelaCadastroGenero.php' method='post'>
     <table>
      <tr>
@@ -117,7 +116,7 @@ Bloco;
     global $query;
 
  $nomeGeneroAtual= $_POST['nome'];
- echo "gravar dados:$nomeGeneroAtual ";
+ #echo "gravar dados:$nomeGeneroAtual ";
 
 
 echo <<< Bloco
@@ -146,7 +145,7 @@ echo <<< Bloco
     }
 
        </style>
-     ]
+
        <script>
            function irParaOutrosScripts(script){
                document.location="./"+script;
@@ -156,7 +155,7 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
@@ -170,13 +169,10 @@ Bloco;
  $respostaAtual=ExecutaQuery($dbh,$query);
 
 
-
-
-
 echo <<< Bloco
 
 
-   <div >
+   <div>
       Operação Finalizada
    </div>
    <br>
@@ -259,11 +255,11 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
-    <div class='menuTabela'>
+    <div >
     <form name='formulario' action='./TelaCadastroGenero.php' method='post'>
     <table>
      <tr>

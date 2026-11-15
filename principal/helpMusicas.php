@@ -63,11 +63,11 @@ echo <<< Bloco
 
 
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
-    <div class='menuTabela'>
+    <div>
     <form name='formulario' action='./novaGravacao.php' method='post'>
     <table>
      <tr>

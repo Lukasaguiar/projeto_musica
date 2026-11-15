@@ -41,7 +41,7 @@ echo<<< Bloco
      </script>
 
   </head>
-  <body>
+  <body class='menuTabela'>
      <main>
       <center>
         <div class=\"TituloPrincipal\">Testar Banco de dados </div>

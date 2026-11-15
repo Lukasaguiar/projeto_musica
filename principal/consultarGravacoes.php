@@ -85,8 +85,8 @@ echo <<< Bloco
 
     </head>
   </head>
-  <body>
-     <main class='menuTabela'>
+  <body class='menuTabela'>
+     <main>
       <center>
         <div class="TituloPrincipal">Tela de Consulta de gravações </div>
 

@@ -93,11 +93,11 @@ echo <<< Bloco
            }
          </script>
     </head>
-    <body>
+    <body class='menuTabela'>
     <center>
 
 
-    <div class='menuTabela'>
+    <div>
     <form name='formulario' action='./novaGravacao.php' method='post'>
     <table>
      <tr>
@@ -179,7 +179,7 @@ Bloco;
      }
 
         </style>
-      ]
+      
         <script>
             function irParaOutrosScripts(script){
                 document.location="./"+script;
@@ -189,7 +189,7 @@ Bloco;
 
 
      </head>
-     <body>
+     <body class='menuTabela'>
      <center>
 
 
