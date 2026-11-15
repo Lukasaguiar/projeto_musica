@@ -167,25 +167,6 @@ Bloco;
   }
 
 
-echo <<< Bloco
-
-   <tr>
-     <td>
-       <iframe class="ajuda-play"  src="$urlAtual" frameborder="0"
-           width="400px" height="200px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-           allowfullscreen>
-       </iframe>
-     </td>
-       </tr>
-    </tr>
-       <td align='middle'> <a href="$urlAtual" target="_blank"> $nomeGravacao </a> </td>
-    <tr>
-
-
-
-Bloco;
-
-
 
 
 echo <<< Bloco
